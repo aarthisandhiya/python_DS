@@ -1,0 +1,14 @@
+ def isAnagram(self, a, b):
+        if len(a) != len(b):
+            return False
+    
+        myDictA = {}
+        myDictB = {}
+    
+        for char in a:
+            myDictA[char] = myDictA.get(char, 0) + 1
+    
+        for char in b:
+            myDictB[char] = myDictB.get(char, 0) + 1
+    
+        return myDictA == myDictB
