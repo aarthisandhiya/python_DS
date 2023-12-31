@@ -1,0 +1,6 @@
+def longest(self, names, n):
+    	str=""
+    	for i in names:
+    	    if len(i)>len(str):
+    	        str=i
+    	return str
