@@ -1,0 +1,16 @@
+ def winner(self,arr,n):
+        # Your code here
+        # return the name of the winning candidate and the votes he recieved
+        elementcount=defaultdict(int)
+        
+        for element in arr:
+            elementcount[element]+=1
+        
+        
+        max_votes=0
+        winner=""
+        for candidate,votes in elementcount.items():
+            if votes>max_votes or (votes==max_votes and candidate< winner):
+                max_votes=votes
+                winner=candidate
+        return [winner,str(max_votes)]
