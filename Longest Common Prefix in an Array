@@ -1,0 +1,24 @@
+def longestCommonPrefix(self, arr, n):
+        if len(arr)==1:
+            return arr[0]
+        else:
+            strlen=len(arr[0])
+            str=''
+            finalstr=''
+            for i in range(len(arr)):
+                if len(arr[i])<=strlen:
+                    str=arr[i]
+                    strlen=len(arr[i])
+            
+            for i in range(0,len(str)):
+                count=0
+                for j in range(0,len(arr)):
+                    jValue=arr[j]
+                    if str[i] == jValue[i]:
+                        count=count+1
+                if count==len(arr):
+                    finalstr=finalstr+str[i]
+            if len(finalstr)>0:
+                return finalstr
+            else:
+                return -1
