@@ -1,0 +1,10 @@
+ def singleElement(self, arr, N):
+        myDIct={}
+        for i in arr:
+            if i in myDIct:
+                myDIct[i]=myDIct[i]+1
+            else:
+                myDIct[i]=1
+        for key,values in myDIct.items():
+            if values==1:
+                return key
