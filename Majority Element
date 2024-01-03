@@ -1,0 +1,13 @@
+ def majorityElement(self, A, N):
+        if len(A)==1:
+            return A[0]
+        myDict={}
+        for i in A:
+            if i in myDict:
+                myDict[i]=myDict[i]+1
+            else:
+                myDict[i]=1
+        for key , values in myDict.items():
+            if values> N/2:
+                return key
+        return -1
