@@ -1,0 +1,11 @@
+  def equilibriumPoint(self,A, N):
+        if len(A)==1:
+            return A[0]
+        total=sum(A)
+        left=0
+        for i in range(len(A)):
+            total=total-A[i]
+            if left==total:
+                return i+1
+            left=left+A[i]
+        return -1
